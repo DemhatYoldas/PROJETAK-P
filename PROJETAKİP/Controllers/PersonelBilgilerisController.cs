@@ -101,16 +101,16 @@ namespace PROJETAKİP.Controllers
             return View(personelBilgileri);
         }
 
-       
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    PersonelBilgileri personelBilgileri = db.personelBilgileris.Find(id);
-        //    db.personelBilgileris.Remove(personelBilgileri);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            PersonelBilgileri personelBilgileri = db.personelBilgileris.Find(id);
+            db.personelBilgileris.Remove(personelBilgileri);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         protected override void Dispose(bool disposing)
         {
