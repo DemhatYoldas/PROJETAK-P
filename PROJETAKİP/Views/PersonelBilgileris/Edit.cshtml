@@ -17,42 +17,42 @@
                     @Html.LabelFor(model => model.AdSoyad, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                        <input class="form-control" type="text" id="AdSoyad" name="AdSoyad" value="">
+                        <input class="form-control" type="text" id="AdSoyad" name="AdSoyad" value="@Model.AdSoyad">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.Eposta, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-                        <input class="form-control" type="email" name="Eposta" id="Eposta" value="">
+                        <input class="form-control" type="email" name="Eposta" id="Eposta" value="@Model.Eposta">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.Departman, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
-                        <input class="form-control" type="text" id="Departman" name="Departman" value="">
+                        <input class="form-control" type="text" id="Departman" name="Departman" value="@Model.Departman">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.Gorev, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-task"></i></span>
-                        <input type="text" class="form-control" id="Gorev" name="Gorev" value="">
+                        <input type="text" class="form-control" id="Gorev" name="Gorev" value="@Model.Gorev">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.TCNO, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-id-card"></i></span>
-                        <input type="text" class="form-control" id="TCNO" name="TCNO">
+                        <input type="text" class="form-control" id="TCNO" name="TCNO" value="@Model.TCNO">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.Yetki, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-user-minus"></i></span>
-                        <input class="form-control" type="text" id="Yetki" name="Yetki">
+                        <input class="form-control" type="text" id="Yetki" name="Yetki" value="@Model.Yetki">
                     </div>
 
                 </div>
@@ -60,29 +60,29 @@
                     @Html.LabelFor(model => model.TelNo, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
-                        <input type="text" class="form-control" id="TelNo" name="TelNo" maxlength="11">
+                        <input type="text" class="form-control" id="TelNo" name="TelNo" maxlength="11" value="@Model.TelNo">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.Adres, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-location-plus"></i></span>
-                        <input type="text" class="form-control" id="Adres" name="Adres">
+                        <input type="text" class="form-control" id="Adres" name="Adres" value="@Model.Adres">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.DogumTarihi, htmlAttributes: new { @class = "control-label col-md-6" })
-                    <input type="datetime-local" class="form-control" id="DogumTarihi" name="DogumTarihi">
+                    <input type="datetime-local" class="form-control" id="DogumTarihi" name="DogumTarihi" value="@Model.DogumTarihi">
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.IseGirisTarihi, htmlAttributes: new { @class = "control-label col-md-6" })
-                    <input type="datetime-local" class="form-control" id="IseGirisTarihi" name="IseGirisTarihi">
+                    <input type="datetime-local" class="form-control" id="IseGirisTarihi" name="IseGirisTarihi" value="@Model.IseGirisTarihi">
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.MedeniHali, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bxs-quote-single-left"></i></span>
-                        <input type="text" class="form-control" id="MedeniHali" name="MedeniHali">
+                        <input type="text" class="form-control" id="MedeniHali" name="MedeniHali" value="@Model.MedeniHali">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bxs-quote-single-right"></i></span>
                     </div>
                 </div>
@@ -90,14 +90,14 @@
                     @Html.LabelFor(model => model.Sifre, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-lock"></i></span>
-                        <input type="password" class="form-control" id="Sifre" name="Sifre">
+                        <input type="password" class="form-control" id="Sifre" name="Sifre" value="@Model.Sifre">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.PozisyonAciklama, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-note"></i></span>
-                        <input type="text" class="form-control" id="PozisyonAciklama" name="PozisyonAciklama">
+                        <input type="text" class="form-control" id="PozisyonAciklama" name="PozisyonAciklama" value="@Model.PozisyonAciklama">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
@@ -106,7 +106,7 @@
 
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-notepad"></i></span>
-                        <input type="text" class="form-control" id="YakinBilgisi" name="YakinBilgisi">
+                        <input type="text" class="form-control" id="YakinBilgisi" name="YakinBilgisi" value="@Model.YakinBilgisi">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
@@ -114,7 +114,7 @@
 
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-male"></i></span>
-                        <input type="text" class="form-control" id="YakinAdSoyad" name="YakinAdSoyad">
+                        <input type="text" class="form-control" id="YakinAdSoyad" name="YakinAdSoyad" value="@Model.AdSoyad">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
@@ -122,14 +122,14 @@
 
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-id-card"></i></span>
-                        <input type="text" class="form-control" id="YakinTC" name="YakinTC">
+                        <input type="text" class="form-control" id="YakinTC" name="YakinTC" value="@Model.YakinTC">
                     </div>
                 </div>
                 <div class="mb-3 col-md-6">
                     @Html.LabelFor(model => model.YakinTel, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="input-group input-group-merge">
                         <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
-                        <input type="text" class="form-control" id="YakinTel" name="YakinTel">
+                        <input type="text" class="form-control" id="YakinTel" name="YakinTel" value="@Model.YakinTel">
                     </div>
                 </div>
             </div>
