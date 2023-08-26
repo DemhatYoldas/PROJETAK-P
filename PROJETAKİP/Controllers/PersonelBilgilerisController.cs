@@ -120,5 +120,10 @@ namespace PROJETAKİP.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult PersonelKart()
+        {
+            return View();
+        }
     }
 }

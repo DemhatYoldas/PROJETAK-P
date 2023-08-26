@@ -80,6 +80,9 @@ namespace PROJETAKİP.Models.Personel
         [DisplayName("İŞE GİRİŞ TARİHİ")]
         public DateTime? IseGirisTarihi { get; set; }
 
+        [DisplayName("PERSONEL GÖRSELİ")]
+        public string PersonelGorseli { get; set; }
+
         public virtual ICollection<PersonelProjeleri> PersonelProjeleris { get; set; }
     }
 }
