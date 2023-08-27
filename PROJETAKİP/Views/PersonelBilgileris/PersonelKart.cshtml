@@ -11,16 +11,13 @@
         box-shadow: 0px -17px 19px 12px rgba(67, 89, 113, 0.12) !important;
     }
 </style>
-
-
 <section class="content">
 
     <div class="card card-solid">
         <div class="card-body pb-0">
-            @foreach (var item in Model)
-            {
-                <div class="row">
-
+            <div class="row">
+                @foreach (var item in Model)
+                {
                     <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                         <div class="card bg-light d-flex flex-fill">
                             <div class="card-header text-muted border-bottom-0">
@@ -54,14 +51,10 @@
                         </div>
                     </div>
 
+                }
 
-                </div>
-            }
+            </div>
         </div>
-
-
-
-
     </div>
 
 </section>

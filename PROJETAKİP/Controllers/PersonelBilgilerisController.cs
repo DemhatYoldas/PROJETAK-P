@@ -123,7 +123,7 @@ namespace PROJETAKİP.Controllers
 
         public ActionResult PersonelKart()
         {
-            return View();
+            return View(db.personelBilgileris.ToList());
         }
     }
 }
