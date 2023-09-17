@@ -37,5 +37,16 @@ namespace PROJETAKİP.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Edit(int id)
+        {
+            var projeobje = db.personelProjeleris.Find(id);
+            return View(projeobje);
+        }
+
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
