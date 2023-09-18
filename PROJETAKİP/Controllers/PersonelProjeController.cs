@@ -44,9 +44,25 @@ namespace PROJETAKİP.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(PersonelProjeleri projeObj)
         {
-            return View();
+            var projeDbObj = db.personelProjeleris.Find(projeObj.PersonelProjeId);
+            projeDbObj.ProjeAciklama = projeObj.ProjeAciklama;
+            projeDbObj.ProjeBaslik = projeObj.ProjeBaslik;
+            projeDbObj.TamamlanmaOrani = projeObj.TamamlanmaOrani;
+            projeDbObj.OncelikDurumu = projeObj.OncelikDurumu;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Tamamla(int id)
+        {
+            var projeobj = db.personelProjeleris.Find(id);
+            projeobj.TamamlanmaDurumu=true;
+            projeobj.TamamlanmaOrani = 100;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
+
 }
