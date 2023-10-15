@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 
@@ -61,7 +62,49 @@ namespace PROJETAKİP.Controllers
                 }
                 personeltamamlanmisprojesayisi[personel.PersonelBilgiId] = tamamalanmisprojesayisi;
             }
+            var siraliPersonelListesi = personeltamamlanmisprojesayisi.OrderBy(x => x.Value);// tamamlanmis proje sayisina göre personelleri sirala
+            var encoktamalananpersonelId = siraliPersonelListesi.First().Key;//en çok tamamlama sayısına sahip personel al
+            var encoktamalananpersonel = db.personelBilgileris.FirstOrDefault(p => p.PersonelBilgiId == encoktamalananpersonelId);
+            ViewBag.encoktamamlayanPersonelBilgisi = encoktamalananpersonel.AdSoyad;
 
+            int encokprojetamamlayanpersonelprojesayisi = personeltamamlanmisprojesayisi[encoktamalananpersonelId];
+            ViewBag.Encokprojetamamlayanpersonelprojesayisi = encokprojetamamlayanpersonelprojesayisi;
+
+            return View();
+        }
+
+        public ActionResult Genelistatistik()
+        {
+            var personeller=db.personelProjeleris.ToList();
+            var persoenlprojeleri = db.personelProjeleris.ToList();
+            var tamamlananprojesayiai = new Dictionary<int, int>();
+            var tamamlanmayanprojesayisi=new Dictionary<int, int>();
+            var toplamprojesayisi=new Dictionary<int , int>();
+            foreach (var personel in personeller)
+            {
+                int tamamlananproje = 0;
+                int tamamlanmayanproje = 0;
+                int toplamproje = 0;
+                foreach (var proje in persoenlprojeleri)
+                {
+                    if (proje.PersonelBilgileris.Contains(personeller))
+                    {
+                        toplamproje++;
+                        if (proje.TamamlanmaDurumu)
+                        {
+                            tamamlananproje++;
+
+                        }
+                        else
+                        {
+                                tamamlanmayanproje++;
+                        }
+                    }
+                }
+                tamamlananprojesayiai[personel.PersonelProjeId] = tamamlananproje;
+                tamamlanmayanprojesayisi[personel.PersonelProjeId]= tamamlanmayanproje;
+                toplamprojesayisi[personel.PersonelProjeId] = toplamproje;
+            }
             return View();
         }
     }
