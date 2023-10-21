@@ -1,0 +1,33 @@
+﻿@model List<PROJETAKİP.Models.Personel.PersonelBilgileri>
+@{
+    ViewBag.Title = "Genelİstatistik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+    <h5 class="card-header">Genel İstatistik</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                <th>Personel Adı</th>
+                <th>Tamamalanan Proje Sayısı</th>
+                <th>Tamamlanmayan Proje Sayısı</th>
+                <th>Toplam Proje Sayısı</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var personel in Model)
+                {
+                    <tr>
+                        <td>@personel.AdSoyad</td>
+                        <td>@ViewBag.tamamlananProjeSayisi[personel.PersonelBilgiId] </td>
+                        <td>@ViewBag.tamamlanmayanProjeSayisi[personel.PersonelBilgiId] </td>
+                        <td>@ViewBag.toplamProjeSayisi[personel.PersonelBilgiId] </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

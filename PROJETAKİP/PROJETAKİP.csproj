@@ -473,6 +473,7 @@
     <Content Include="Views\PersonelProje\Index.cshtml" />
     <Content Include="Views\PersonelProje\Create.cshtml" />
     <Content Include="Views\PersonelProje\Edit.cshtml" />
+    <Content Include="Views\GenelBakis\Genelİstatistik.cshtml" />
     <Content Include="Views\GenelBakis\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
