@@ -144,6 +144,17 @@ namespace PROJETAKİP.Controllers
             ViewBag.OrtaVeBasarisiz = basarisizveorta;
 
 
+           
+
+            int personelSayaisi = db.personelProjeleris.Count();
+            ViewBag.personelSayaisi = personelSayaisi;
+
+            var yüksekvebasarisiz = db.personelProjeleris.Where(p => p.TamamlanmaDurumu == false && p.OncelikDurumu == "Yüksek Öncelikli").Count();
+            ViewBag.yüksekvebasarisiz = yüksekvebasarisiz;
+
+            var ortavebasarisiz = db.personelProjeleris.Where(p => p.TamamlanmaDurumu == false && p.OncelikDurumu == "Orta Öncelikli").Count();
+            ViewBag.ortavebasarisiz = ortavebasarisiz;
+
             return View(personeller);
         }
 
