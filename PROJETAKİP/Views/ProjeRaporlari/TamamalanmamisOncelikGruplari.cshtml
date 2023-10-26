@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <div class="col-md-12">
 
     <div class="card card-info">
@@ -18,7 +19,7 @@
 
 
 
-            <div id="PieStokKategorichart_div"></div>
+            <div id="PieTamamlanmamisOncelikchart_div"></div>
 
 
 
@@ -47,12 +48,12 @@
                         'packages': ['corechart']
                     });
                     google.charts.setOnLoadCallback(function () {
-                        drawKategoriChart(result);
+                        drawTamamlanmamisOncelikChart(result);
                     });
                 }
             });
         });
-    function drawKategoriChart(result) {
+    function drawTamamlanmamisOncelikChart(result) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Öncelik');
             data.addColumn('number', 'Proje Adı');
@@ -69,9 +70,8 @@
                 bar: { groupWidth: "100%" },
             };
             var mycolumnChart = new google.visualization.PieChart(document
-                .getElementById('PieStokKategorichart_div'));
+                .getElementById('PieTamamlanmamisOncelikchart_div'));
 
             mycolumnChart.draw(data, mycolumnChartOptions);
         }
 </script>
-

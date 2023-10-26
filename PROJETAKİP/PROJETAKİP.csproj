@@ -478,8 +478,10 @@
     <Content Include="Views\PersonelProje\Edit.cshtml" />
     <Content Include="Views\GenelBakis\Genelİstatistik.cshtml" />
     <Content Include="Views\GenelBakis\Index.cshtml" />
-    <Content Include="Views\ProjeRaporlari\TamamlanmisOncelikGrupları.cshtml" />
+    <Content Include="Views\ProjeRaporlari\GenelProjeRaporlari.cshtml" />
     <Content Include="Views\ProjeRaporlari\TamamalanmamisOncelikGruplari.cshtml" />
+    <Content Include="Views\ProjeRaporlari\TamamalanmisOncelikGruplari.cshtml" />
+    <Content Include="Views\ProjeRaporlari\CanliDestek.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
